@@ -1,7 +1,11 @@
 meteor-modal-example
 ====================
 
-Example Meteor app illustrating modal dialogs, mobile detection, and jquery multi-select plugin
+Example Meteor app illustrating:
+
+  * modal dialogs ([bootboxjs][2])
+  * mobile detection ([detectmobilebrowser][5] + [yepnope][4])
+  * beautiful multi-select ([loudev jquery plugin][3])
 
 
 ### How to run
@@ -42,3 +46,4 @@ The [loudev multiselect library][3], while fantastic, is not appropriate for mob
 [2]: https://atmosphere.meteor.com/package/bootboxjs "bootboxjs"
 [3]: http://loudev.com/ "loudev"
 [4]: http://yepnopejs.com/ "yepnope"
+[5]: http://detectmobilebrowsers.com/ "detectmobilebrowsers"
