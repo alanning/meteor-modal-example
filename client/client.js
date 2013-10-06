@@ -6,7 +6,8 @@ Meteor.startup(function () {
 
 
 Template.userList.events({
-  'click .name a': manageRolesClicked
+  'click .name a': manageRolesClicked,
+  'click .roles': manageRolesClicked
 })
 
 Template.userList.helpers({

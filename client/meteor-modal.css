@@ -5,10 +5,21 @@
 .user-list > li {
   padding:1em;
 }
+.name {
+  font-size:1.4em;
+  padding-bottom:0.1em;
+}
+.help {
+  color:#555;
+  padding: 0.4em 0;
+}
+.roles {
+  cursor:pointer;
+}
 .roles li {
-  border: 1px solid #ccc;
+  border: 1px solid #667;
   border-radius:0.5em;
-  background-color:#3a3;
+  background-color:#e2ffe7;
   display:inline-block;
   padding:0.2em 0.6em;
 }
