@@ -24,7 +24,7 @@ mrt
 
 ### Live Demo
 
-(http://modal-example.meteor.com/)[http://modal-example.meteor.com/]
+http://modal-example.meteor.com/
 
 
 ### Y U NO Package?!
