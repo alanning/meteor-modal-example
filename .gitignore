@@ -6,9 +6,12 @@ lib-cov
 *.out
 *.pid
 *.gz
+*.swp
+*.bak
 
 pids
 logs
 results
 
+smart.lock
 npm-debug.log

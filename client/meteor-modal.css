@@ -1,0 +1,14 @@
+.user-list,
+.roles {
+  list-style:none;
+}
+.user-list > li {
+  padding:1em;
+}
+.roles li {
+  border: 1px solid #ccc;
+  border-radius:0.5em;
+  background-color:#3a3;
+  display:inline-block;
+  padding:0.2em 0.6em;
+}

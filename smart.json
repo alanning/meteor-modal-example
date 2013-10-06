@@ -1,0 +1,9 @@
+{
+  "meteor": {
+    "tag": "release/0.6.4.1"
+  },
+  "packages": {
+    "bootboxjs": {},
+    "roles": {}
+  }
+}

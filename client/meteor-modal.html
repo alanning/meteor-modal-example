@@ -1,0 +1,103 @@
+<head>
+  <title>meteor-modal-example</title>
+
+  <script>
+    // only want multi-select to show up in non-mobile browsers
+    var notMobile = []
+        
+    function addLouDevMultiSelect (targetArray) {
+      targetArray.push('/loudev/jquery.multi-select.min.js')
+      targetArray.push('/loudev/multi-select.css')
+    }
+
+    addLouDevMultiSelect (notMobile)
+
+    yepnope({
+      test: jQuery.browser.mobile,
+      nope: notMobile
+    })
+  </script>
+</head>
+
+<body>
+  {{> userList}}
+</body>
+
+<template name="userList">
+<div class="manage-users row">
+  <div class="offset3 span9">
+
+  <div class="row">
+    <div class="span6">
+      <h2>People Directory</h2>
+    </div>
+  </div>
+
+  <ul class="user-list">
+  {{#each users}}
+  <li>
+    <div class="person" data-id="{{_id}}">
+
+      <div class="name">
+        <a href="/directory/{{emailAddress}}">{{profile.firstname}} {{profile.lastname}}</a>
+      </div> 
+
+      <div>{{#each emails}}{{address}} {{/each}}</div>
+
+      {{#if profile.mobile}}
+        <div>{{mobile}} </div>
+      {{/if}}
+
+      <div><span class="help">Authorized to:</span> 
+        <ul class="roles">
+          {{#each roles}}
+          <li><span class="role">{{.}}</span></li>
+          {{/each}}
+        </ul>
+      </div>
+
+    </div>
+  </li>
+  {{/each}}
+  <ul>
+
+  {{> editRolesForm}}
+
+  </div>
+</div>
+</template>
+
+
+<template name="editRolesForm">
+  <div id="user-roles" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <form id="manage-roles-form">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Manage Permissions</h3>
+      </div>
+
+      <div class="modal-body">
+        {{#with user}}
+        <input type="hidden" id="_id" name="_id" value="{{_id}}" />
+
+        <div>
+          <h4>Name: {{profile.firstname}} {{profile.lastname}}</h4>
+        </div>
+
+        <br />
+        <select id="roles" name="roles" multiple>
+          {{#each allRoles}}
+          <option value="{{.}}">{{.}}</option>
+          {{/each}}
+        </select>
+        {{/with}}
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button id="saveChanges" class="btn btn-primary">Save changes</button>
+      </div>
+    </form>
+  </div>
+</template>
