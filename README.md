@@ -22,6 +22,11 @@ mrt
 4. Point some browsers to `http://localhost:3000/`
 
 
+### Live Demo
+
+(http://modal-example.meteor.com/)[http://modal-example.meteor.com/]
+
+
 ### Y U NO Package?!
 
 We do!  This example uses the [bootboxjs][2] smart package available up on Atmosphere.
